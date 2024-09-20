@@ -33,9 +33,10 @@
 
                      <!-- user operation starts -->
                       <!-- add and cash out button -->
-                      <div class="grid grid-cols-2">
+                      <div class="grid grid-cols-3">
                         <button id="add-money-trigger" class="btn bg-gray-300 text-black hover:bg-gray-600">Add Money</button>
                         <button id="cash-out-trigger" class="btn bg-gray-300 text-black hover:bg-gray-600">Cash Out</button>
+                        <button id="transaction-trigger" class="btn bg-gray-300 text-black hover:bg-gray-600">Transaction</button>
                       </div>
                       <br>
                       <!-- add money form starts -->
@@ -80,17 +81,24 @@
                             </div>
                           </form>
                         </div>
-
-
                        <!-- cash out ends -->
 
+                        <!-- transaction history starts  -->
+                        <div class="hidden" id="transaction-history-form">
+                          <h1>Hello</h1>
+                        </div>
+                        <!-- transaction history ends  -->
                      <!-- user operation ends -->
                 </div>
               </div>
             </div>
         </div>
     </main>
-    <script src="./js/home.js"></script>
-    <script src="./js/cashout.js"></script>
+    <!-- <script src="./js/home.js"></script>
+    <script src="./js/cashout.js"></script> -->
+    <script src="./reusable js/utilities.js"></script>
+    <script src="./reusable js/Home.js"></script>
+    <script src="./reusable js/buttontrigger.js"></script>
+    
 </body>
 </html>
