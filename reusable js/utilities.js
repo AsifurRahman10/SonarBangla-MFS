@@ -17,10 +17,7 @@ function hideOther(id){
     const addMoneyContainer = document.getElementById('add-money-form').classList.add("hidden");
     const cashOuContainer = document.getElementById('cash-out-form').classList.add("hidden");
     const transactionContainer = document.getElementById('transaction-history-form').classList.add("hidden");
+    const transferMoneyContainer = document.getElementById('transfer-money-form').classList.add("hidden");
     document.getElementById(id).classList.remove("hidden");
 }
 
-// save transaction history both add or cash out
-function saveHistory(id){
-    
-}
