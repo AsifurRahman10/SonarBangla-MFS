@@ -7,21 +7,45 @@ document.getElementById('add-money-btn').addEventListener("click", function (eve
     if (addMoneyPin === 1234) {
         const updatedBalance = addAmount + totalAmount;
         document.getElementById('current-balance').innerText = updatedBalance;
+        
+        // adding to transaction history
+        const div = document.createElement('div');
+        div.classList.add("bg-green-600","flex", "mb-2", "p-3")
+        div.innerHTML = `
+        <h3 class ="text-xl font-bold text-white">Money Added</h3>
+        <p class="text-white font-bold">${addAmount} added, Current Balance ${updatedBalance}</P>
+        `
+        document.getElementById('history-container').appendChild(div);
     }
-    else{
+    else {
         alert('Money not added. Please try again')
     }
 })
 
 // cash out and update it into main balance 
 
-document.getElementById('cash-out-btn').addEventListener('click', function(event){
+document.getElementById('cash-out-btn').addEventListener('click', function (event) {
     event.preventDefault();
     const cashOutAmount = getValueFromInput('input-cash-out-amount');
     const addMoneyPin = getValueFromInput('cash-out-input-pin');
     const totalAmount = getTextFromElement("current-balance");
-    if(addMoneyPin === 1234){
+    if (addMoneyPin === 1234) {
         const updatedBalance = totalAmount - cashOutAmount;
         document.getElementById('current-balance').innerText = updatedBalance;
+
+        // cash out transaction history
+        const div = document.createElement('div');
+        div.classList.add("bg-red-600","flex", "mb-2", "p-3")
+        div.innerHTML = `
+        <h3 class ="text-xl font-bold text-white">Money Added</h3>
+        <p class="text-white font-bold">${cashOutAmount} added, Current Balance ${updatedBalance}</P>
+        `
+        document.getElementById('history-container').appendChild(div);
+    }
+    else {
+        alert('Cash out Failed. Please try again')
     }
 })
+
+// Transaction history display and save
+
