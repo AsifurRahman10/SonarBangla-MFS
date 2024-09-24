@@ -18,6 +18,8 @@ function hideOther(id){
     const cashOuContainer = document.getElementById('cash-out-form').classList.add("hidden");
     const transactionContainer = document.getElementById('transaction-history-form').classList.add("hidden");
     const transferMoneyContainer = document.getElementById('transfer-money-form').classList.add("hidden");
+    const getBonusContainer = document.getElementById('get-bonus-container').classList.add("hidden");
+    const payBillContainer = document.getElementById('pay-bill-container').classList.add("hidden");
     document.getElementById(id).classList.remove("hidden");
 }
 

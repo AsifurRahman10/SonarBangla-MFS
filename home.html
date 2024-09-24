@@ -46,8 +46,8 @@
               <!-- 2nd button row -->
               <div class="grid grid-cols-3 gap-x-1">
                 <button id="transfer-money" class="btn bg-gray-300 text-black hover:bg-gray-600">Transfer Money</button>
-                <button id="" class="btn bg-gray-300 text-black hover:bg-gray-600">Get Bonus</button>
-                <button id="" class="btn bg-gray-300 text-black hover:bg-gray-600">Pay Bill</button>
+                <button id="get-bonus-btn" class="btn bg-gray-300 text-black hover:bg-gray-600">Get Bonus</button>
+                <button id="bill-pay-btn" class="btn bg-gray-300 text-black hover:bg-gray-600">Pay Bill</button>
               </div>
             </div>
             <br>
@@ -130,12 +130,38 @@
             <!-- transfer money ends -->
 
             <!-- get bonus starts -->
-            <div class="flex flex-col items-center gap-y-5 px-4 rounded-xl py-6">
-              <label class="text-xl font-bold">Enter Bonus Coupon</label>
-              <input type="text" placeholder="Enter your coupon" class="input input-bordered input-primary w-full max-w-xs text-center" />
-              <button class="btn btn-active btn-primary text-white w-1/2">Get Bonus</button>
+            <div class="hidden" id="get-bonus-container">
+              <div class="flex flex-col items-center gap-y-5 px-4 rounded-xl py-6 ">
+                <label class="text-xl font-bold" id="">Enter Bonus Coupon</label>
+              <input id="input-coupon" type="text" placeholder="Enter your coupon" class="input input-bordered input-primary w-full max-w-xs text-center" />
+              <button id="btn-bonus" class="btn btn-active btn-primary text-white w-1/2">Get Bonus</button>
+              </div>
             </div>
             <!-- get bonus ends -->
+
+            <!-- Pay Bill money starts -->
+            <div id="pay-bill-container" class="hidden">
+              <form class="card-body border-2 rounded-lg shadow-lg">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pay Amount</span>
+                  </label>
+                  <input id="input-pay-amount" type="number" placeholder="Enter Amount"
+                    class="input input-bordered" required />
+                </div>
+                <div class="form-control" id="pay-pin">
+                  <label class="label">
+                    <span class="label-text">PIN</span>
+                  </label>
+                  <input id="pay-amount-input-pin" type="password" placeholder="Enter PIN"
+                    class="input input-bordered" required />
+                </div>
+                <div class="form-control mt-6">
+                  <button class="btn btn-primary" id="pay-button">Transfer</button>
+                </div>
+              </form>
+            </div>
+            <!-- pay bill ends -->
             <!-- user operation ends -->
           </div>
         </div>

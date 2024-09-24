@@ -14,3 +14,13 @@ document.getElementById('transaction-trigger').addEventListener('click', functio
 document.getElementById('transfer-money').addEventListener('click',function(){
     const transferMoneyDisplay = hideOther('transfer-money-form');
 })
+
+// transfer amount trigger
+document.getElementById('get-bonus-btn').addEventListener('click',function(){
+    const transferMoneyDisplay = hideOther('get-bonus-container');
+})
+
+// pay amount trigger
+document.getElementById('bill-pay-btn').addEventListener('click',function(){
+    const transferMoneyDisplay = hideOther('pay-bill-container');
+})
